@@ -14,8 +14,8 @@ import org.springframework.context.annotation.FilterType;
 public class AutoAppConfig {
     //수동 등록 빈이 우선권을 가짐
     //boot 는 기본적으로 중복 등록을 못하게 했음
-    @Bean(name = "memoryMemberRepository")
-    MemberRepository memberRepository() {
-        return new MemoryMemberRepository();
-    }
+//    @Bean(name = "memoryMemberRepository")
+//    MemberRepository memberRepository() {
+//        return new MemoryMemberRepository();
+//    }
 }
