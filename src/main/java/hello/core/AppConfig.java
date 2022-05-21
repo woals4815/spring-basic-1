@@ -25,7 +25,10 @@ public class AppConfig {
     @Bean
     public MemoryMemberRepository memberRepository() {
         System.out.println("Call AppConfig.memberRepository");
-        return new MemoryMemberRepository();
+
+        MemoryMemberRepository memoryMemberRepository = new MemoryMemberRepository();
+        System.out.println("memoryMemberRepository = " + memoryMemberRepository);
+        return memoryMemberRepository;
     }
 
     @Bean

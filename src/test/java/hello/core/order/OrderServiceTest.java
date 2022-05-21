@@ -18,9 +18,13 @@ public class OrderServiceTest {
 
     @BeforeEach
     public void beforeEach() {
+        //이건 순수 자바코드로 테스트 한 것이기에 각자의 메모리 주소가 다 다른 new 객체이다.
+        System.out.println("hello");
         AppConfig appConfig = new AppConfig();
         memberService = appConfig.memberService();
+        System.out.println("hello");
         orderService = appConfig.orderService();
+        System.out.println("hello");
     }
 
     @Test()
