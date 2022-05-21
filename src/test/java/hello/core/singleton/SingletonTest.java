@@ -23,6 +23,22 @@ public class SingletonTest {
         System.out.println("memberService1 = " + memberService1);
         System.out.println("memberService2 = " + memberService2);
 
+
         assertThat(memberService1).isNotSameAs(memberService2);
+    }
+
+    public static void main(String[] args) {
+        //private 생성자이므로 안됨
+//        SingletonService singletonService = new SingletonService();
+
+    }
+
+    @Test
+    @DisplayName("use singleton object")
+    void singtonServiceTest() {
+        SingletonService singletonService1 = SingletonService.getInstance();
+        SingletonService singletonService2 = SingletonService.getInstance();
+
+        assertThat(singletonService1).isSameAs(singletonService2);
     }
 }
