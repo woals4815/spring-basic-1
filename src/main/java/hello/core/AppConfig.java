@@ -27,7 +27,6 @@ public class AppConfig {
         System.out.println("Call AppConfig.memberRepository");
 
         MemoryMemberRepository memoryMemberRepository = new MemoryMemberRepository();
-        System.out.println("memoryMemberRepository = " + memoryMemberRepository);
         return memoryMemberRepository;
     }
 
@@ -41,6 +40,7 @@ public class AppConfig {
     }
     @Bean
     public DiscountPolicy discountPolicy() {
+        System.out.println("AppConfig.discountPolicy");
         return new FixDiscountPolicy();
     }
 }
